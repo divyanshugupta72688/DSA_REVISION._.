@@ -1,4 +1,4 @@
-package LinkedList.Quetions;
+
 
 public class ReverseLinkedList {
     static class Node {
