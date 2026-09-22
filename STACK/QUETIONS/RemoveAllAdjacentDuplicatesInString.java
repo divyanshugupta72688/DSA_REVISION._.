@@ -1,19 +1,24 @@
 package STACK.QUETIONS;
+
 import java.util.*;
+
 //1047
 public class RemoveAllAdjacentDuplicatesInString {
-    public  String Solution(String s){
-        Stack<Character>stack = new Stack<>();
+    public String Solution(String s) {
+        Stack<Character> stack = new Stack<>();
         StringBuilder sb = new StringBuilder();
-        for(int i = 0;i<s.length();i++){
+        for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            if (!stack.isEmpty()&&stack.peek()==ch) {
+            if (!stack.isEmpty() && stack.peek() == ch) {
                 stack.pop();
-            }stack.push(ch);
+            } else {
+                stack.push(ch);
+            }
         }
-        for(char ch : stack){
+        for (char ch : stack) {
             sb.append(ch);
         }
         return sb.toString();
     }
 }
+// "Add Quetion No.1047 On LeetCode"
